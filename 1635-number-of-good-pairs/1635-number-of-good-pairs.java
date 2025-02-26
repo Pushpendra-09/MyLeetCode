@@ -2,16 +2,15 @@ class Solution {
     public int numIdenticalPairs(int[] nums) {
         int count=0;
         int n=nums.length;
+        int pair[]=new int[101];
         for(int i=0;i<n;i++)
+
         {
-            for(int j=i+1;j<n;j++)
-            {
-                if(nums[i]==nums[j])
-                {
-                    count++;
-                }
-            }
+            int a=nums[i];
+            count+=pair[a]++;
         }
-        return count;
+          return count;
+
     }
+  
 }
