@@ -1,14 +1,12 @@
 class Solution {
     public boolean checkIfPangram(String sentence) {
-        if(sentence.length()<26)
-        return false;
-        for(char ch='a';ch <='z';ch++)
+        int max=(1<<26)-1, temp=0;
+        for(char ch:sentence.toCharArray())
         {
-            if(sentence.indexOf(ch)<0)
-            return false;
-
+            temp |=1 <<ch-'a';
+            if(temp==max) return true;
         }
-     return true;   
+        return false;
     }
       
 }
