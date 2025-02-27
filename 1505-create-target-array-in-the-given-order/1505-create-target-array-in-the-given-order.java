@@ -6,11 +6,7 @@ class Solution {
         list.add(index[i],nums[i]);
         //System.out.println(list.get(i));
        }
-       int ans[]=new int[list.size()];
-       for(int i=0;i<list.size();i++)
-       {
-        ans[i]=list.get(i);
-       }
-       return ans;
+      
+       return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
