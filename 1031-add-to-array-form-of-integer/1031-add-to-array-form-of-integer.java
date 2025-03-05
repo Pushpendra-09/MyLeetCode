@@ -6,13 +6,13 @@ class Solution {
          while(i>=0|| k>0)
          {
             if(i>=0)
-            {
-                k+=num[i];
-                i--;
-            }
+            
+                k+=num[i--];
+                
+            
             
          
-         res.add(0,k%10);
+         res.addFirst(k%10);
          k/=10;
          }
      
